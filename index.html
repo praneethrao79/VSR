@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSR PG</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header>
+        <div class="balloons-container">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+
+        <h1>VSR Womens Hostel</h1>
+        <nav>
+            <ul>
+                <li class="nav-link"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-link"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-link"><a href="#rooms" class="nav-link">Rooms</a></li>
+                <li class="nav-link"><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li class="nav-link"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to VSR Womens Hostel</h2>
+        <p>Your safe, comfortable, and friendly living space for women students and professionals.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Located in Hanumakonda, VSR Womens Hostel offers spacious rooms, nutritious food, high-speed WiFi, 24/7 security, and a vibrant homely environment.</p>
+    </section>
+
+    <section id="rooms">
+        <h2>Rooms & Pricing</h2>
+        <ul class="listSize">
+            <li>Four sharing: ₹4800/month</li>
+            <li>Five sharing: ₹4200/month</li>
+            <li>Six sharing: ₹3800/month</li>
+            <li>pent house & seven sharing: ₹3600/month</li>
+        </ul>
+    </section>
+
+    <section id="facilities">
+        <h2>Facilities</h2>
+        <ul class="listSize">
+            <li>Nutritious food (vegetarian & non-vegetarian options)</li>
+            <li>Served Biryani / Bagara on sundays</li>
+            <li>High-speed WiFi</li>
+            <li>Purified drinking water</li>
+            <li>Regular cleaning and hygiene maintenance</li>
+            <li>24/7 CCTV security</li>
+            <li>TV in dining area</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <div class="style-contact">
+            <h2 class="space">Contact Us</h2>
+            <form id="contactForm">
+                <label for="name" class="space">Name:</label>
+                <input type="text" id="name" name="from_name" placeholder="your name" required>
+                
+                <label for="mobile-number" class="space">Mobile number:</label>
+                <input type="tel" id="mobile" name="phone" placeholder="your number" pattern="[0-9]{10}" maxlength="10" required>
+                
+                <label for="message" class="space">Message:</label>
+                <textarea id="message" name="message" placeholder="your message" rows="4" required></textarea><br>
+                
+                <button type="submit" class="btn-primary" id="buttonmain">Send</button>
+            </form>
+        </div>
+        <p class="contactInfo">Email📧: vsr.pg2025@gmail.com<br><br>Phone📱: 9440699013, 9440212857<br><br>Address📍: Opp.SevenHills Hospital, Kishanpura, Hanumakonda, Telangana, 506001, India</p>
+        <a href="https://www.google.com/maps/place/VSR+GIRLS+HOSTEL+1/@18.0156491,79.5430645,15z/data=!4m6!3m5!1s0x3a334f005c221b85:0xa952b3dbe705dac9!8m2!3d18.0118215!4d79.5597139!16s%2Fg%2F11ycfthzw0?authuser=0&entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" class="btn">Click here for Location📍</a>
+    </section>
+
+    <footer>
+        <p>© 2025 VSR Womens Hostel. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

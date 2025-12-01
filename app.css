@@ -1,0 +1,269 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, rgb(199, 130, 130), rgb(237, 237, 110), rgb(122, 122, 248));
+}
+header {
+    background: #f9fba1;
+    color: #f34040;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Header container with overflow hidden */
+header {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Adjust based on your header height */
+}
+
+/* Balloon container */
+.balloons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual balloon styling */
+.balloon {
+  position: absolute;
+  top: -150px;
+  width: 50px;
+  height: 70px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Balloon string */
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Falling animation with slight swing */
+@keyframes fall {
+  0% {
+    top: -150px;
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(3deg);
+  }
+  100% {
+    top: calc(100% + 150px);
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Multiple balloons with different colors, positions, and timings */
+.balloon:nth-child(1) {
+  left: 10%;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+  left: 25%;
+  background: linear-gradient(135deg, #4ecdc4, #44a3a0);
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+  left: 40%;
+  background: linear-gradient(135deg, #ffd93d, #f7c922);
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+  left: 55%;
+  background: linear-gradient(135deg, #a8e6cf, #87d3b4);
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(5) {
+  left: 70%;
+  background: linear-gradient(135deg, #ff8b94, #ff6f7a);
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.balloon:nth-child(6) {
+  left: 85%;
+  background: linear-gradient(135deg, #b4a7d6, #9e8ec7);
+  animation-duration: 10s;
+  animation-delay: 5s;
+}
+
+/* Lighter balloons for depth effect */
+.balloon:nth-child(odd) {
+  opacity: 0.6;
+  width: 40px;
+  height: 56px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;  
+}
+.nav-link {
+  color: #8f1111;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #8f1111;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
+}
+nav ul li a {
+    color: #8f1111;
+    text-decoration-line: underline;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f8f2f2ec;
+    border-radius: 8px;
+}
+h1 {
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 3s infinite;
+    }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Animation starts with full transparency */
+  }
+  to {
+    opacity: 1; /* Animation ends with full opacity */
+  }
+}    
+
+h2 {
+    color:#7445ed;
+    text-decoration-line: underline;
+    font-size: 1.8rem;
+}
+footer {
+    background: #151515;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    background: #0B6354;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.style-contact{
+  background-color: rgb(178, 178, 253);
+}
+.space{
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.733);
+}
+#buttonmain{
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+#name, #mobile{
+  width: 180px;
+  margin-left: 20px;
+}
+#message{
+  width: 250px;
+  margin-left: 20px;
+}
+.contactInfo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgba(103, 41, 15, 0.849);
+    font-family: monospace;
+}
+.btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.listSize, label, p{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(93, 93, 93);
+}
+
+.btn-primary:link, .btn-primary:visited, .btn-primary:hover, .btn-primary:active {
+    border: 2px solid black;
+    box-shadow: 0px 3px 6px grey;
+}
+
+@media (max-width: 700px) {
+    section {
+        max-width: 95vw;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
