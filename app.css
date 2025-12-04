@@ -12,6 +12,7 @@ header {
     text-align: center;
 }
 
+
 /* Header container with overflow hidden */
 header {
   position: relative;
@@ -267,3 +268,75 @@ form button {
         margin: 10px 0;
     }
 }
+
+.room-checker {
+      background: rgba(255,255,255,0.15);
+      padding: 2rem;
+      width: 880px;
+      background-color: #b5aec7;
+      margin-left: 160px;
+      border-radius: 16px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .room-checker label {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    #roomType {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    #roomType:focus {
+      outline: none;
+      border-color: #fff;
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+      transform: scale(1.02);
+    }
+
+    #checkPriceBtn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    #checkPriceBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(254,202,87,0.4);
+    }
+
+    #checkPriceBtn:active {
+      transform: translateY(-1px);
+    }
+
+    #priceResult {
+      margin-top: 1.5rem;
+      padding: 1.2rem;
+      background: rgba(255, 255, 255, 0.966);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      min-height: 20px;
+    }

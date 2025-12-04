@@ -39,15 +39,22 @@
         <p>Located in Hanumakonda, VSR Womens Hostel offers spacious rooms, nutritious food, high-speed WiFi, 24/7 security, and a vibrant homely environment.</p>
     </section>
 
-    <section id="rooms">
-        <h2>Rooms & Pricing</h2>
-        <ul class="listSize">
-            <li>Four sharing: ₹4800/month</li>
-            <li>Five sharing: ₹4200/month</li>
-            <li>Six sharing: ₹3800/month</li>
-            <li>pent house & seven sharing: ₹3600/month</li>
-        </ul>
     </section>
+      <div class="room-checker">
+    <label for="roomType">Choose room type:</label>
+    <select id="roomType">
+      <option value="" selected disabled>Select a room</option>
+      <option value="four">Four sharing</option>
+      <option value="five">Five sharing</option>
+      <option value="six">Six sharing</option>
+      <option value="penthouse">Penthouse & seven sharing</option>
+    </select>
+
+    <button id="checkPriceBtn">Check Price</button>
+
+    <p id="priceResult"></p>
+  </div>
+</section>
 
     <section id="facilities">
         <h2>Facilities</h2>

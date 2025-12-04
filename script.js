@@ -73,3 +73,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+ const prices = {
+    four: "₹4800/month",
+    five: "₹4200/month",
+    six: "₹3800/month",
+    penthouse: "₹3600/month"
+  };
+
+  const roomTypeSelect = document.getElementById("roomType");
+  const checkPriceBtn = document.getElementById("checkPriceBtn");
+  const priceResult = document.getElementById("priceResult");
+
+  checkPriceBtn.addEventListener("click", function () {
+    const selectedValue = roomTypeSelect.value;
+
+    if (!selectedValue) {
+      priceResult.textContent = "Please select a room type.";
+      return;
+    }
+
+    const price = prices[selectedValue];
+    priceResult.textContent = `Price for ${roomTypeSelect.options[roomTypeSelect.selectedIndex].text}: ${price}`;
+  });
+
